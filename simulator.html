@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Deck Simulator | Hitchhiker's Guide - Atelier</title>
+    <meta name="description" content="Simulate how the Hitchhiker's Guide content appears on a LilyGo T-Deck device">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="simulator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="simulator-page">
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>Atelier</h1>
+                        <span class="subtitle">Inquiry Institute</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Project</a></li>
+                    <li><a href="#simulator">Simulator</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="simulator-hero">
+            <div class="container">
+                <h1 class="simulator-title">T-Deck Simulator</h1>
+                <p class="simulator-subtitle">Experience the Hitchhiker's Guide as it appears on the device</p>
+            </div>
+        </section>
+
+        <section id="simulator" class="simulator-section">
+            <div class="container">
+                <div class="simulator-container">
+                    <!-- T-Deck Device -->
+                    <div class="tdeck-device">
+                        <!-- Device Frame -->
+                        <div class="tdeck-frame">
+                            <!-- Display Area -->
+                            <div class="tdeck-display" id="tdeck-display">
+                                <div class="display-content" id="display-content">
+                                    <!-- Content will be loaded here -->
+                                    <div class="loading-screen">
+                                        <p class="loading-text">Loading Guide...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Keyboard Area (visual only, not functional) -->
+                            <div class="tdeck-keyboard">
+                                <div class="keyboard-keys">
+                                    <!-- Keyboard keys will be rendered here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls Panel -->
+                    <div class="simulator-controls">
+                        <div class="controls-section">
+                            <h3>Content Sections</h3>
+                            <div class="content-selector" id="content-selector">
+                                <button class="content-btn active" data-section="welcome">Welcome</button>
+                                <button class="content-btn" data-section="concept">Concept</button>
+                                <button class="content-btn" data-section="design">Design</button>
+                                <button class="content-btn" data-section="technology">Technology</button>
+                                <button class="content-btn" data-section="philosophy">Philosophy</button>
+                                <button class="content-btn" data-section="guide">Guide Entry</button>
+                            </div>
+                        </div>
+
+                        <div class="controls-section">
+                            <h3>Display Settings</h3>
+                            <div class="settings-group">
+                                <label class="setting-item">
+                                    <input type="checkbox" id="show-keyboard" checked>
+                                    <span>Show Keyboard</span>
+                                </label>
+                                <label class="setting-item">
+                                    <input type="checkbox" id="show-borders" checked>
+                                    <span>Show Borders</span>
+                                </label>
+                                <label class="setting-item">
+                                    <select id="font-size">
+                                        <option value="small">Small</option>
+                                        <option value="medium" selected>Medium</option>
+                                        <option value="large">Large</option>
+                                    </select>
+                                    <span>Font Size</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="controls-section">
+                            <h3>Actions</h3>
+                            <div class="action-buttons">
+                                <button class="action-btn" id="refresh-btn">Refresh Content</button>
+                                <button class="action-btn secondary" id="export-btn">Export View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="simulator-info">
+                    <div class="info-content">
+                        <h3>About the Simulator</h3>
+                        <p>This simulator shows how the Hitchhiker's Guide content appears on the LilyGo T-Deck device. The display area represents the actual screen size and resolution of the T-Deck, allowing you to preview how the guide's text, graphics, and interface elements will look when integrated into the physical book.</p>
+                        <p>The content is fetched from the project page and formatted to match the T-Deck's display characteristics, including monospace font rendering and limited screen space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Atelier - Inquiry Institute. All rights reserved.</p>
+            <p class="footer-note">T-Deck Simulator for the Hitchhiker's Guide project.</p>
+        </div>
+    </footer>
+
+    <script src="simulator.js"></script>
+</body>
+</html>
